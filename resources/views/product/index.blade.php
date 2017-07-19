@@ -23,6 +23,11 @@
           <td>{{ $m->mark->name }}</td>
           <td>{{ $m->created_at }}</th>
           <td><a href="product/edit/{{ $m->id }}">edit</a></td>
+          <td>
+            {!! Form::open(array('route' => array('product.del', $m->id), 'method' => 'DELETE')) !!}
+                          <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
+            {!! Form::close() !!}
+          </td>
         </tr>
       @endforeach
   </tbody>

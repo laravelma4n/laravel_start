@@ -73,6 +73,11 @@ Route::put('/product/update/{id}',[
     'uses' => 'ProductController@update'
 ]);
 
+Route::delete('/product/del/{id}',[
+    'as' => 'product.del',
+    'uses' =>'ProductController@del'
+]);
+
 
 //TIPO PETICIONES DE LARAVEL
 //PETICIONES DE TIPO SELECT  get

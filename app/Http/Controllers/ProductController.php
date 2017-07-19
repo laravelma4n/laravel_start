@@ -42,4 +42,9 @@ class ProductController extends Controller
     $p->category_id=$request->category_id;
     $p->save();
   }
+  public function del($id){
+    $p=Product::findOrFail($id);
+    $p->delete();
+    return redirect()->route('products.index');
+  }
 }
